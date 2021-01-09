@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-
+const Port=process.env.port || 4000
 
 //setup express app
 const app = express();
@@ -22,6 +22,6 @@ app.use((err,req,res,next)=>{
 
 
 //starting server
-app.listen(process.env.port || 4000,()=>{
-    console.log('server started');
+app.listen(Port,()=>{
+    console.log(`SERVER STARTED ON ${Port}`);
 });
