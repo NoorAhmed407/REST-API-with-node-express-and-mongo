@@ -1,41 +1,28 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
 
 // "geometry": {
 //     "type": "Point",
 //     "coordinates": [125.6, 10.1]
 //   }
 
-
 //Create Ninja Schema and model
 const NinjaSchema = new Schema({
-    name: {
-        type: String,
-        required: [true, 'Name field is required']
-    },
+  name: {
+    type: String,
+    required: [true, "Name field is required"],
+  },
 
-    rank: {
-        type: String,
+  rank: {
+    type: String,
+  },
 
-    },
-
-    available: {
-        type: Boolean,
-        default: false
-    },
-
-    long: {
-
-    },
-
-    lat : {
-
-    }
+  available: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-
-const Ninja = mongoose.model('ninja', NinjaSchema);
-
+const Ninja = mongoose.model("ninja", NinjaSchema);
 
 module.exports = Ninja;
